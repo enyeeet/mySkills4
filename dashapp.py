@@ -33,7 +33,7 @@ app.layout = html.Div(
             style={"textAlign": "center", "marginBottom": "20px"},
             children=[
                 dcc.RadioItems(
-                    id="region-filer",
+                    id="region-filter",
                     options=[
                         {"label": "All", "value": "all"},
                         {"label": "North", "value": "north"},
@@ -54,7 +54,7 @@ app.layout = html.Div(
 
 @app.callback(
     Output("sales-line-chart", "figure"),
-    Input("region-filer", "value")
+    Input("region-filter", "value")
 )
 def update_chart(selected_region):
 
