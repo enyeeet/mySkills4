@@ -6,9 +6,9 @@ set -e
 
 PYTEST_EXIT_CODE=$?
 
-if [ $PYTEST_EXIT_CODE -eq 0 ]
-then
-  exit 0
+# exit 0 if all tests pass, 1 otherwise
+if [ $PYTEST_EXIT_CODE -eq 0 ]; then
+    exit 0
 else
-  exit 1
+    exit 1
 fi
